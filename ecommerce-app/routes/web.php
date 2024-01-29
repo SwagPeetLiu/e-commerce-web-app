@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use APP\Http\Controller\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// 
+Route::post('/create_product',[ProductsController::class, 'store']);
